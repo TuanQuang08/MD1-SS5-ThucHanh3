@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<br><br>
+<button type="button" onclick="Clear();">Clear</button>
+<br><br>
+<button type="button" onclick="TimeTest();">TimeTest</button>
+<br><br>
+<button type="button" onclick="Table();">TimeTable</button>
+<br><br>
+<button type="button" onclick="Count();">Count</button>
+<br><br>
+<button type="button" onclick="GroupTest();">Group</button>
+<script>
+  function showMessage() {
+    console.log('Hello');
+    console.error('Error');
+    console.warn('Warn');
+    console.c
+  }
+  function Clear() {
+      console.clear();
+  }
+  function TimeTest(){
+      console.time();
+      for (let i = 0;i<10;i++){
+        console.log(i);
+      }
+      console.timeEnd()
+  }
+  function Table() {
+      console.table(["VU","TUAN","QUANG","AAAAAA"]);
+      console.table({Họ:"VU",Tên_đệm:"TUAN",Tên:"QUANG"});
+  }
+  function Count(){
+      for (let i = 0;i<10;i++){
+          console.count("No");
+      }
+  }
+  function GroupTest(){
+      console.log("Xin Choa");
+      console.group();
+      console.log("Xin Choa khi group");
+      console.log("Xin Choa van dang trong group");
+      console.groupEnd();
+      console.log("Xin Choa out group");
+  }
+</script>
+</body>
+</html>
